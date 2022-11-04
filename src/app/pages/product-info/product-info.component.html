@@ -1,0 +1,222 @@
+<div class="d-flex custom-border" *ngIf="selectedProduct">
+  <div class="images">
+    <div class="product-image-container" *ngFor="let productImage of selectedProduct.images">
+      <img [src]="productImage" alt="" class="img-responsive product-image">
+    </div>
+  </div>
+  <div class="details">
+    <h3 class="brand-title">{{ selectedProduct.brand }}</h3>
+    <h5 class="product-title">{{ selectedProduct.title }}</h5>
+    <div class="review-container">
+      <div class="review-button">
+        <span class="rating">{{ selectedProduct.rating }} </span>
+        <i class="fa fa-star"></i>
+        <span> | </span>
+        <span class="number-reviews">{{ selectedProduct.reviews }} ratings</span>
+      </div>
+    </div>
+    <div class="details-pricing">
+      <span class="current-price"> Rs. {{ selectedProduct.currentPrice }} </span>
+      <span class="actual-mrp"> MRP <span> Rs. {{ selectedProduct.mrp }} </span></span>
+      <span class="product-discount">( {{ selectedProduct.discount }} off )</span>
+    </div>
+    <h5 class="tax">inclusive of all taxes</h5>
+    <div class="size-container">
+      <h4 class="select-size"> SELECT SIZE <span class="size-chart"> SIZE CHART<i class="fa fa-caret-right"></i>
+        </span>
+      </h4>
+      <div class="size-options">
+        <button class="size-button" [disabled]="size.available ? false : true" [id]=" 'size-button-' + size.size"
+          *ngFor="let size of selectedProduct.sizes"
+          [ngClass]="size.available ? 'size-button-enabled' : 'size-button-disabled'"
+          (click)="setActiveSize(size.size);"><span
+            [ngClass]="size.available ? '' : 'strike'"></span>{{ size.size }}</button>
+      </div>
+    </div>
+    <div class="actions d-flex">
+      <button class="add-bag-button action-button" [disabled]="selectedSize > 0 ? false : true"
+        [ngClass]="selectedSize > 0 ? '' : 'add-bag-disabled'" (click)="addToBag();"><i class="fa fa-bag-shopping"></i>
+        Add to Bag</button>
+      <span class="empty-div"></span>
+      <button class="wishlist-button action-button"> <i class="fa-regular fa-heart"></i> Wishlist </button>
+    </div>
+    <div class="product-details">
+      <div class="detailed-desc">
+        <h3 class="title">PRODUCT DETAILS &nbsp; <i class="fa fa-clipboard"></i> </h3>
+        <p class="description">{{ selectedProduct.description }}</p>
+      </div>
+      <div class="additional-details">
+        <h5 class="additional-details-title">size & fit</h5>
+        <p class="additional-main-heading">{{ selectedProduct.fitType }}</p>
+        <p class="additional-desc">The Model is wearing size of 40</p>
+      </div>
+      <div class="additional-details">
+        <h5 class="additional-details-title">Material & Care</h5>
+        <p class="additional-main-heading">Material: 100% Cotton</p>
+        <p class="additional-desc">Machine Wash</p>
+      </div>
+      <div class="additional-details">
+        <h5 class="additional-details-title">Specifications</h5>
+        <div class="d-flex">
+          <div class="left">
+
+            <div class="details-container">
+              <div class="details-title">
+                Fit
+              </div>
+              <div class="details-desc">
+                {{ selectedProduct.fitType }}
+              </div>
+            </div>
+
+            <div class="details-container">
+              <div class="details-title">
+                Sleeve Length
+              </div>
+              <div class="details-desc">
+                Long Sleeves
+              </div>
+            </div>
+
+            <div class="details-container">
+              <div class="details-title">
+                Occasion
+              </div>
+              <div class="details-desc">
+                Casual
+              </div>
+            </div>
+
+            <div class="details-container">
+              <div class="details-title">
+                Hemline
+              </div>
+              <div class="details-desc">
+                Curved
+              </div>
+            </div>
+
+            <div class="details-container">
+              <div class="details-title">
+                Placket Length
+              </div>
+              <div class="details-desc">
+                Full
+              </div>
+            </div>
+
+            <div class="details-container">
+              <div class="details-title">
+                Pocket Type
+              </div>
+              <div class="details-desc">
+                Patch
+              </div>
+            </div>
+
+            <div class="details-container">
+              <div class="details-title">
+                Transparency
+              </div>
+              <div class="details-desc">
+                Opaque
+              </div>
+            </div>
+
+            <div class="details-container">
+              <div class="details-title">
+                Surface Styling
+              </div>
+              <div class="details-desc">
+                Chest Pocket
+              </div>
+            </div>
+
+          </div>
+          <div class="empty-flex" style="flex: 0.1;"></div>
+          <div class="right">
+            <div class="details-container">
+              <div class="details-title">
+                Color
+              </div>
+              <div class="details-desc">
+                {{ selectedProduct.color }}
+              </div>
+            </div>
+
+
+            <div class="details-container">
+              <div class="details-title">
+                Print or Pattern Type
+              </div>
+              <div class="details-desc">
+                Solid
+              </div>
+            </div>
+
+            <div class="details-container">
+              <div class="details-title">
+                Length
+              </div>
+              <div class="details-desc">
+                Regular
+              </div>
+            </div>
+
+            <div class="details-container">
+              <div class="details-title">
+                Placket
+              </div>
+              <div class="details-desc">
+                Button Placket
+              </div>
+            </div>
+
+            <div class="details-container">
+              <div class="details-title">
+                Cuff
+              </div>
+              <div class="details-desc">
+                Button
+              </div>
+            </div>
+
+            <div class="details-container">
+              <div class="details-title">
+                Weave Pattern
+              </div>
+              <div class="details-desc">
+                Regular
+              </div>
+            </div>
+
+            <div class="details-container">
+              <div class="details-title">
+                Number of Pockets
+              </div>
+              <div class="details-desc">
+                1
+              </div>
+            </div>
+
+            <div class="details-container">
+              <div class="details-title">
+                Main Trend
+              </div>
+              <div class="details-desc">
+                New Basics
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="additional-details">
+        <h5 class="additional-details-title">Complete The Look</h5>
+        <p class="additional-main-heading">Cozy up with this in-style WROGN shirt this season. A night at the movies is
+          perfectly well-styled by putting this black piece with some slim trousers and a fun overshirt.</p>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,277 @@
+.images {
+  width: 60%;
+  flex-wrap: wrap;
+}
+
+.product-image-container {
+  display: inline-block;
+  width: 40%;
+  margin: 10px;
+  overflow: hidden;
+}
+
+.product-image:hover {
+  transform: scale(1.03);
+  transition: transform .6s;
+  cursor: zoom-in;
+  will-change: transform;
+}
+
+.details {
+  width: 40%;
+}
+
+.brand-title {
+  font-weight: bold;
+  font-size: 32px;
+  color: #282c3f;
+  overflow: hidden;
+  text-transform: uppercase;
+}
+
+.product-title {
+  color: #535766;
+  font-weight: 200;
+  font-size: 24px;
+  overflow: hidden;
+}
+
+.review-container {
+  margin-top: 15px;
+  border-bottom: 1px solid #d4d5d9;
+  padding-bottom: 15px;
+}
+
+.review-button {
+  display: inline-block;
+  text-align: center;
+  background: rgb(255, 255, 255);
+  border: #dedede 1px solid;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  cursor: pointer;
+}
+
+.review-button:hover {
+  border: #272727 1px solid;
+}
+
+.details-pricing {
+  margin-top: 10px;
+}
+
+.current-price {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.actual-mrp {
+  font-size: 22px;
+  font-weight: 200;
+}
+
+.actual-mrp span {
+  text-decoration: line-through;
+}
+
+.product-discount {
+  font-size: 22px;
+  font-weight: 400;
+  color: #ff905a;
+}
+
+.tax {
+  color: #03a685;
+  font-weight: 500;
+  font-size: 14px;
+  display: block;
+  margin: 5px 10px 0 0;
+}
+
+.size-container {
+  margin-top: 20px;
+}
+
+.select-size {
+  font-size: 14px;
+}
+
+.size-chart {
+  color: #ff3e6c;
+  margin-left: 30px;
+  cursor: pointer;
+}
+
+.size-options {
+  margin-top: 10px;
+}
+
+.size-button {
+  position: relative;
+  padding: 20px;
+  font-size: 16px;
+  font-weight: 500;
+  background-color: #fff;
+  border-radius: 50px;
+  padding: 0;
+  min-width: 50px;
+  height: 50px;
+  text-align: center;
+  margin-right: 10px;
+}
+
+.size-button-enabled {
+  border: 1px solid #bfc0c6;
+  cursor: pointer;
+  color: #282c3f;
+}
+
+.size-button-enabled:hover {
+  border: 1px solid #ff3f6c;
+}
+
+.size-button-disabled {
+  color: #d5d6d9;
+  border: 1px solid #d5d6d9;
+  cursor: default;
+  font-weight: 500;
+  outline: none;
+  overflow: hidden;
+}
+
+.size-button-active {
+  border: 1px solid #ff3f6c;
+  background-color: #fff;
+  color: #ff3f6c !important;
+}
+
+.strike {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #d5d6d9;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.actions {
+  width: 100%;
+  margin-top: 30px;
+  border-bottom: 1px solid #d4d5d9;
+  padding-bottom: 30px;
+}
+
+.action-button {
+  display: block;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  cursor: pointer;
+  border-radius: 2px;
+}
+
+.add-bag-button {
+  width: 40%;
+  background-color: #ff3e6c;
+  border: 1px solid #ff3e6c;
+  color: #fff;
+}
+
+.add-bag-button:hover {
+  background-color: #ff527b;
+}
+
+.add-bag-disabled {
+  cursor: not-allowed;
+}
+
+.empty-div {
+  display: block;
+  width: 2%;
+}
+
+.wishlist-button {
+  width: 30%;
+  background: rgb(255, 255, 255);
+  border: #dedede 1px solid;
+}
+
+.wishlist-button:hover {
+  border: #272727 1px solid;
+}
+
+.wishlist-button>img {
+  width: 16px;
+}
+
+.product-details {
+  margin: 20px 0;
+}
+
+.product-details .title {
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.product-details .description {
+  font-weight: 300;
+  font-size: 16px;
+  margin-top: 10px;
+  padding-top: 5px;
+}
+
+.additional-details {
+  margin-top: 15px;
+}
+
+.additional-details-title {
+  text-transform: capitalize;
+}
+
+.additional-main-heading {
+  font-weight: 300;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.additional-desc {
+  font-weight: 300;
+  font-size: 14px;
+}
+
+.left {
+  flex: 0.4;
+}
+
+.right {
+  flex: 0.4;
+}
+
+.details-container {
+  border-bottom: 1px solid #d4d5d9;
+  margin-top: 10px;
+  padding-bottom: 10px;
+}
+
+.details-container .details-title {
+  font-size: 12px;
+  color: #7e818c;
+}
+
+.details-container .details-desc {
+  font-size: 16px;
+  color: #282c3f;
+  text-transform: capitalize;
+}
+
+.fa-star {
+  color: #00a85d;
+}

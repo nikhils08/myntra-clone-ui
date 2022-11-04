@@ -1,0 +1,35 @@
+<div class="nav-item">
+  <a style="cursor: pointer;" (click)="toggleDropdown();">
+    <img id="svg" src="https://www.svgrepo.com/show/17522/bag.svg" alt="" />
+    <div>Bag</div>
+  </a>
+  <div class="cart-count" *ngIf="bagItems.length > 0">{{ bagItems.length }}</div>
+</div>
+<div class="main-container">
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <span class="close" (click)="closeModal();"><i class="fa fa-times"></i></span>
+      <h2 class="text-center" *ngIf="bagItems.length < 1">No Items added in Bag</h2>
+      <div class="data-container d-flex" *ngFor="let currentProduct of bagItems; let i = index">
+        <div class="product-image">
+          <img [src]="currentProduct.product.images[0]" alt="" class="img-responsive" style="width: 100px;">
+        </div>
+        <div class="empty-div">&nbsp;</div>
+        <div class="details">
+          <h3 class="brand-title">{{ currentProduct.product.brand }}</h3>
+          <h5 class="product-title">{{ currentProduct.product.title }}</h5>
+          <div class="size-quantity">
+            <span>Size: {{ currentProduct.productSize }} </span>
+            <span class="ml-2">Quantity: {{ currentProduct.productSizeQuantity }} </span>
+          </div>
+          <div class="actions">
+            <button class="remove-item" (click)="removeItem(i);">
+              <i class="fa fa-times"></i>
+              Remove Item
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

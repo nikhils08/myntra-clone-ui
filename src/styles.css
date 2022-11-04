@@ -1,1 +1,76 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+html,
+body {
+  background-color: rgb(250, 251, 253);
+  font-family: 'Manrope', sans-serif;
+}
+
+.img-responsive {
+  max-width: 100%;
+  height: auto;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.justify-content-between {
+  justify-content: space-between;
+}
+
+.justify-content-start {
+  justify-content: left;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.d-block {
+  display: block;
+}
+
+.d-inline {
+  display: inline;
+}
+
+.ml-2 {
+  margin-left: 0.8rem;
+}
+
+.mb-2 {
+  margin-bottom: 1rem;
+}
+
+.pl-2 {
+  padding-left: 1rem;
+}
+
+.text-captitalize {
+  text-transform: uppercase;
+}
+
+.d-hidden {
+  display: none !important;
+}
+
+.d-show {
+  display: block;
+}
+
+.bg-white {
+  background-color: #FFF;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.text-center {
+  text-align: center;
+}

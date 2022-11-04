@@ -1,0 +1,170 @@
+.currentProduct {
+  width: 210px;
+  overflow: hidden;
+  text-align: left;
+  vertical-align: top;
+  position: relative;
+}
+
+.to-page {
+  text-decoration: none;
+  color: #222222;
+}
+
+.image-container {
+  width: 100%;
+  z-index: 0;
+  position: relative;
+}
+
+.similar-products {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  background: rgb(255, 255, 255);
+  font-size: 10px;
+  font-weight: 400;
+  padding: 5px;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.similar-title,
+.similar-products {
+  display: none;
+}
+
+.similar-products:hover .similar-title {
+  display: inline;
+}
+
+.review-container {
+  position: absolute;
+  z-index: 1;
+  bottom: 10px;
+  margin-left: 10px;
+  padding: 0 10px;
+  font-size: 14px;
+  background: rgba(237, 237, 237, 0.8);
+  border-radius: 2px;
+  font-weight: 600;
+}
+
+.review-container>img {
+  position: relative;
+  top: 1px;
+  width: 16px;
+}
+
+.details-container {
+  padding: 10px;
+}
+
+.brand-title {
+  font-weight: 500;
+  color: #282c3f;
+  overflow: hidden;
+}
+
+.product-title {
+  color: #535766;
+  font-weight: 300;
+  font-size: 14px;
+  overflow: hidden;
+}
+
+.actual-mrp {
+  font-size: 12px;
+  font-weight: 200;
+  text-decoration: line-through;
+}
+
+.product-discount {
+  font-size: 12px;
+  font-weight: 400;
+  color: #ff905a;
+}
+
+.size-title {
+  display: none;
+  color: #535766;
+  font-weight: 300;
+  font-size: 14px;
+  overflow: hidden;
+}
+
+.currentProduct:hover .size-title,
+.currentProduct:hover .actions,
+.currentProduct:hover .similar-products {
+  display: block;
+}
+
+.currentProduct:hover .brand-title,
+.currentProduct:hover .product-title,
+.currentProduct:hover .review-container {
+  display: none;
+}
+
+.currentProduct:hover {
+  background: rgb(255, 255, 255);
+  box-shadow: 0 2px 16px 4px rgb(40 44 63 / 7%);
+  cursor: pointer;
+}
+
+/* 
+.currentProduct:hover .image-container>img {
+  animation-name: imageTransform;
+  animation-duration: 150ms;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+}
+
+@keyframes imageTransform {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(0.99);
+  }
+} */
+
+.actions {
+  width: 100%;
+  text-align: center;
+  display: none;
+}
+
+.wishlist-button {
+  display: block;
+  text-align: center;
+  background: rgb(255, 255, 255);
+  border: #dedede 1px solid;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 2px 0;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  cursor: pointer;
+}
+
+.wishlist-button:hover {
+  border: #272727 1px solid;
+}
+
+.wishlist-button>img {
+  width: 16px;
+}
+
+/*******************************************
+************ FONT AWESOME ICONS ************
+********************************************/
+
+.fa-star {
+  color: #00a85d;
+}

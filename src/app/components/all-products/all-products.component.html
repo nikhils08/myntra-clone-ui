@@ -1,0 +1,69 @@
+<div class="d-flex justify-content-start custom-border">
+  <div class="filters">
+    <label class="text-captitalize pl-2 mb-2" for="">FILTERS</label>
+    <div class="mb-2"></div>
+    <div class="filter">
+      <div class="d-block pl-2"><input type="radio" value="Men"><label class="ml-2" for="">Men</label></div>
+      <div class="d-block pl-2"><input type="radio" value="Women"><label class="ml-2" for="">Women</label></div>
+      <div class="d-block pl-2"><input type="radio" value="Boys"><label class="ml-2" for="">Boys</label></div>
+      <div class="d-block pl-2"><input type="radio" value="Girls"><label class="ml-2" for="">Girls</label></div>
+    </div>
+
+    <div class="filter">
+      <label class="text-captitalize pl-2 mb-2" for="">Brand</label>
+      <div class="mb-2"></div>
+      <div class="d-block pl-2" *ngFor="let currentBrand of brandList;"><input type="checkbox" [value]="currentBrand"
+          (change)="onBrandSelect($event)"><label class="ml-2" for="">{{ currentBrand }}</label></div>
+    </div>
+
+    <div class="filter">
+      <label class="text-captitalize pl-2 mb-2" for="">Price</label>
+      <div class="mb-2"></div>
+      <div class="d-block pl-2"><input type="range" [min]="minPrice" [max]="maxPrice" step="10" id=""
+          [(ngModel)]="selectedPriceRange" (change)="applyAllFilters();"><label class="ml-2"
+          for="">{{ selectedPriceRange }}</label></div>
+    </div>
+  </div>
+  <div class="right-div">
+    <div class="horizontal-filters ml-2">
+      <ul>
+        <li class="d-inline">
+          <div class="horizontal-filter" data-id="horizontal-filter-1" (click)="toggleFilter()">
+            <label for="">Fit <span class="fa"
+                [ngClass]="fitFilterActive ? 'fa-caret-up' : 'fa-caret-down'"></span></label>
+          </div>
+        </li>
+
+        <!-- <li class="d-inline ml-2">
+          <div class="horizontal-filter" data-id="horizontal-filter-2">
+            <label for="">Add Ons <span class="fa fa-caret-down"></span></label>
+          </div>
+        </li> -->
+        <!-- <li>
+          <div class="horizontal-filter" data-id="horizontal-filter-1">
+            <label for="">Add Ons <span class="fa fa-caret-down"></span></label>
+          </div>
+        </li> -->
+        <!-- <li>
+          <div class="horizontal-filter" data-id="horizontal-filter-1">
+            <label for="">Add Ons <span class="fa fa-caret-down"></span></label>
+          </div>
+        </li> -->
+      </ul>
+      <div [ngClass]="fitFilterActive ? 'd-show' : 'd-hidden'" class="horizontal-filter-block bg-white w-100"
+        data-id="horizontal-filter-1">
+        <div class="pl-2 d-inline" *ngFor="let fitType of fitList;"><input type="checkbox"
+            (change)="onFitSelect($event)" [value]="fitType"><label class="ml-2" for="">{{ fitType }}</label></div>
+      </div>
+    </div>
+    <div class="mb-2"></div>
+    <div class="products-container" *ngIf="toShowProducts.length > 0">
+      <app-product *ngFor="let currentProduct of toShowProducts;" [currentProduct]="currentProduct"></app-product>
+    </div>
+    <div class="products-container" style="display: block;" *ngIf="toShowProducts.length < 1">
+      <h3 style="text-align: center;">No Products Found</h3>
+    </div>
+  </div>
+
+
+</div>

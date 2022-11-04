@@ -1,0 +1,38 @@
+<div class="currentProduct" *ngIf="currentProduct" (mouseenter)="mouseHovered();" (mouseleave)="mouseOut();">
+  <a href="buy/{{currentProduct.id}}" target="_blank" class="to-page">
+    <div class="image-container">
+      <!-- <div class="image-hover-fader" *ngIf="isImageHovered">
+        <div class="mySlides fade" *ngFor="let currentImage of currentProduct.images">
+          <img class="img-responsive" [src]="currentImage">
+        </div>
+      </div> -->
+
+      <img [src]="currentProduct.images[0]" alt="" class="img-responsive" *ngIf="!isImageHovered || isImageHovered">
+      <span class="similar-products">
+        <i class="fa-regular fa-eye"></i> <span class="similar-title"> Similar Products </span>
+      </span>
+      <div class="review-container">
+        <span class="rating">{{ currentProduct.rating }} </span>
+        <i class="fa fa-star"></i>
+        <span> | </span>
+        <span class="number-reviews">{{ currentProduct.reviews }}</span>
+      </div>
+    </div>
+    <div class="details-container">
+      <div class="details-header">
+        <h3 class="brand-title">{{ currentProduct.brand }}</h3>
+        <h4 class="actions">
+          <span class="wishlist-button"> <i class="fa-regular fa-heart"></i> Wishlist </span>
+        </h4>
+        <h5 class="product-title">{{ currentProduct.title }}</h5>
+        <h5 class="size-title">Sizes: {{ sizes }}</h5>
+      </div>
+      <div class="details-pricing">
+        <span class="current-price"> Rs. {{ currentProduct.currentPrice }} </span>
+        <span class="actual-mrp"> Rs. {{ currentProduct.mrp }} </span>
+        <span class="product-discount">( {{ currentProduct.discount }} off )</span>
+      </div>
+    </div>
+  </a>
+
+</div>
